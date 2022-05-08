@@ -19,10 +19,10 @@ resource "helm_release" "external_secrets" {
   version    = "0.4.4"
   namespace  = "external-secrets"
 
-  set {
-    name  = "replicaCount"
-    value = "3"
-  }
+  # set {
+  #   name  = "replicaCount"
+  #   value = "3"
+  # }
 
   set {
     name  = "leaderElect"
