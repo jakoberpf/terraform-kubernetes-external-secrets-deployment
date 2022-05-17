@@ -9,3 +9,13 @@ variable "compartment" {
   type        = string
   description = "The compartment the ressource is deployed with."
 }
+
+variable "vault_server" {
+  type        = string
+  description = "undefined"
+}
+
+variable "vault_token" {
+  type        = string
+  description = "undefined"
+}
