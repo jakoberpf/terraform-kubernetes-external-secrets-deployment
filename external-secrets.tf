@@ -1,23 +1,9 @@
-resource "kubernetes_namespace" "external_secrets" {
-  metadata {
-    annotations = {
-      name = "external-secrets"
-    }
-
-    labels = {
-      managed-by = var.compartment
-    }
-
-    name = "external-secrets"
-  }
-}
-
 resource "helm_release" "external_secrets" {
-  name       = "external-secrets"
+  name       = var.name
   repository = "https://charts.external-secrets.io"
   chart      = "external-secrets"
   version    = "0.5.3"
-  namespace  = "external-secrets"
+  namespace  = var.namespace
 
   set {
     name  = "replicaCount"
