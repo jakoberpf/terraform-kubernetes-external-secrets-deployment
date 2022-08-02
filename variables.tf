@@ -5,6 +5,11 @@ variable "name" {
   default     = "external-secrets"
 }
 
+variable "namespace" {
+  type    = string
+  default = "external-secrets"
+}
+
 variable "compartment" {
   type        = string
   description = "The compartment the ressource is deployed with."
