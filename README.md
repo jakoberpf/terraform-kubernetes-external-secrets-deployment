@@ -1,3 +1,3 @@
 # terraform-module-kubernetes-external-secrets
 
-This module setup the external secrets manager with a vault backend.
+This module manages the external secrets manager with a vault backend.
