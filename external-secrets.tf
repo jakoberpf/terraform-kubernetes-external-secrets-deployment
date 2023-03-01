@@ -2,7 +2,7 @@ resource "helm_release" "external_secrets" {
   name       = var.name
   repository = "https://charts.external-secrets.io"
   chart      = "external-secrets"
-  version    = "0.5.3"
+  version    = var.helm_chart_version
   namespace  = var.namespace
 
   set {

@@ -15,6 +15,13 @@ variable "compartment" {
   description = "The compartment the ressource is deployed with."
 }
 
+# Helm
+variable "helm_chart_version" {
+  type    = string
+  default = "0.5.3"
+}
+
+# Backend - Vault
 variable "vault_server" {
   type        = string
   description = "undefined"
