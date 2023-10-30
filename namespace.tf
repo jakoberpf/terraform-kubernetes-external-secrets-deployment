@@ -3,11 +3,9 @@ resource "kubernetes_namespace" "external_secrets" {
     annotations = {
       name = var.namespace
     }
-
     labels = {
       managed-by = var.compartment
     }
-
     name = var.namespace
   }
 }
